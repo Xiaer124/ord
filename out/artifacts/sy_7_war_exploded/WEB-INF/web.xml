@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+    <context-param>
+        <param-name>first</param-name>
+        <param-value>这是第一个参数值</param-value>
+    </context-param>
+    <context-param>
+        <param-name>second</param-name>
+        <param-value>这是第二个参数值</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>GetWebParameter</servlet-name>
+        <servlet-class>com.servlet.GetWebParameter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetWebParameter</servlet-name>
+        <url-pattern>/GetWebParameter</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetParameterTest</servlet-name>
+        <servlet-class>com.servlet.GetParameterTest</servlet-class>
+        <init-param>
+            <param-name>qwer</param-name>
+            <param-value>陈彩华</param-value>
+        </init-param>
+        <init-param>
+            <param-name>school</param-name>
+            <param-value>湖南广播电视大学</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetParameterTest</servlet-name>
+        <url-pattern>/GetParameterTest</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShareParameterA</servlet-name>
+        <servlet-class>com.servlet.ShareParameterA</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShareParameterA</servlet-name>
+        <url-pattern>/ShareParameterA</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShareParameterA</servlet-name>
+        <servlet-class>com.servlet.ShareParameterB</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShareParameterB</servlet-name>
+        <url-pattern>/ShareParameterB</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GetResourceServlet</servlet-name>
+        <servlet-class>com.servlet.GetResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetResourceServlet</servlet-name>
+        <url-pattern>/GetResourceServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
